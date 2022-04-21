@@ -1,29 +1,12 @@
-import './App.css';
-import Bar from './components/AppBar.jsx';
-import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import  Tour from './pages/Tour';
 
-function App() {
-  return (
-      <div className="App">
-        <Bar/>
-        <Router>
-          <Routes>
-            <Route path="/" element={<Home/>}/>
-            <Route path="/:id" element={<Tour/>}/>
-          </Routes>
-          
-        </Router>
-    </div>     
-  );
-}
+import TourCard from "../components/TourCard.jsx";
+import Container from '@mui/material/Container';
+import Grid from '@mui/material/Grid';
+import cities from '../data.json';
+import { Typography } from '@mui/material';
 
-export default App;
-
-
-{/*
-
+export default function Home(){
+    return(
 
         <Container sx={{marginY:6}}>
         {cities.map(city=>{
@@ -49,5 +32,10 @@ export default App;
           );
 
         })}
+      
+      </Container>
+        
+    );
 
-*/}
+
+}
